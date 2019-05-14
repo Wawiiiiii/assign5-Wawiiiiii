@@ -6,7 +6,7 @@ PImage[][] soils, stones;
 PFont font;
 
 final int GAME_START = 0, GAME_RUN = 1, GAME_OVER = 2, GAME_WIN = 3;
-int gameState = 1;
+int gameState = 0;
 
 final int GRASS_HEIGHT = 15;
 final int SOIL_COL_COUNT = 8;
@@ -565,7 +565,7 @@ boolean isHit(float ax, float ay, float aw, float ah, float bx, float by, float 
 }
 
 String convertFramesToTimeString(int frames){	// Requirement #4
-  return nf(floor(frames/3600),2,0)+":"+nf(floor(frames%3600/60),2,0);
+  return nf(floor(frames/3600),1,0)+":"+nf(floor(frames%3600/60),1,0);
 }
 
 color getTimeTextColor(int frames){	
